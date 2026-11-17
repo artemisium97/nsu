@@ -2,10 +2,10 @@
 
 log="$1"
 
-[[ -z "$log" || ! -f "$log" ]] && {
+if [[ -z "$log" || ! -f "$log" ]]; then
     echo "Usage: $0 <transactions.log>" >&2
     exit 1
-}
+fi
 
 awk '
 {
