@@ -3,7 +3,7 @@
 : > server.conf
 
 for var in SERVER_NAME MAX_PLAYERS SPAWN_COORDS; do
-    value="${!var:-}"
+    value="${!var}"
 
     if [[ -z "$value" ]]; then
         if   [[ "$var" == "SERVER_NAME"  ]]; then value="StarCraft"
